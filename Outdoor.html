@@ -1,0 +1,622 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indoor</title>
+  <style>
+    nav {
+      background: #703800;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 1000;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    h1 { color: #FFFFFF; text-align: center; }
+    .logo {
+      height: 5rem; width: 5rem; border-radius: 3rem;
+      position: fixed; top: 1.5rem ; left: 1rem ;
+    }
+    .gallery {
+      display: flex; flex-direction: column; align-items: center; margin-top: 2rem;
+    }
+    .thumbnails {
+      display: flex; gap: 1rem; margin-bottom: 1rem;
+    }
+    .thumbnails img {
+      height: 3rem; width: 3rem; cursor: pointer;
+      border: 2px solid transparent; border-radius: 0.5rem;
+    }
+    .thumbnails img.active { border: 2px solid #703800; }
+    .main-view img {
+      height: auto; width: 100%; border-radius: 0.5rem; margin-bottom: 1rem;
+    }
+    .product-info { text-align: center; }
+    .product-info h2 { color: #703800; margin-bottom: 1rem; }
+    .btn {
+      background: #9D4F00; color: #fff; border: none;
+      padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;
+      text-decoration: none; /* عشان يبقى شكل زرار مش لينك */
+      display: inline-block;
+    }
+    .btn:hover { background: #703800; }
+    input{
+      text-align: center ;
+      margin-left: 35% ;
+      margin-top: 1rem ;
+      width: 13rem ;
+      height:2rem ;
+    }
+   .gallery .thumbnails{
+   display:flex ;
+   flex-wrap:wrap ;
+   justify-content:center ;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="Logo.webp" class="logo" alt="Logo">
+    <h1>Media Console</h1>
+  </nav>
+<input type="text" id="searchbox" placeholder="search with number or name">
+ 
+    <div class="main-view">
+      <img id="mainImage" src="Indoor01.webp" alt="Main Product">
+    </div>
+
+    <div class="product-info">
+      <h2 id="productTitle">Indoor 01</h2>
+      <a id="detailsBtn" href="https://wa.me/2011 20004447?text=أنا%20مهتم%20بـ%20%20indoor%2001" class="btn" target="_blank">Ask for details</a>
+    </div>
+     <article class="gallery">
+    <div class="thumbnails">
+      <img src="Indoor01.webp"
+           data-full="Indoor01.webp"
+           data-title="indoor01"
+           data-link="https://wa.me/2011 20004447?text=أنا%20مهتم%20بـ%20%20indoor%2001"
+           class="active" data-name="indoor01">
+
+      <img src="Indoor02.webp"
+           data-full="Indoor02"
+           data-title="Indoor02.webp"
+           data-link="https://wa.me/2011 20004447?text=أنا%20مهتم%20بـ%20%20indoor%2002" data-name="Indoor02">
+
+      <img src="Indoor03.webp"
+           data-full="Indoor03.webp"
+           data-title="Indoor03"
+           data-link="https://wa.me/2011 20004447?text=أنا%20مهتم%20بـ%20%20Indoor%2003" data-name="Indoor03">
+                 <img src="Indoor04.webp"
+           data-full="Indoor04.webp"
+           data-title="Indoor04"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20%20Indoor%2004" data-name="Indoore04">
+                 <img src="Indoor05.webp"
+           data-full="Indoor05.webp"
+           data-title="Indoor 05"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20%20Indoor%2005" data-name="Indoor 05">
+<img src="Indoor06.webp"
+     data-full="Indoor06.webp"
+     data-title="Indoor 06"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2006"
+     data-name="Indoor06">
+
+<img src="Indoor07.webp"
+     data-full="Indoor07.webp"
+     data-title="Indoor 07"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2007"
+     data-name="Indoor07">
+
+<img src="Indoor09.webp"
+     data-full="Indoor09.webp"
+     data-title="Indoor 09"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2009"
+     data-name="Indoor09">
+
+<img src="Indoor10.webp"
+     data-full="Indoor10.webp"
+     data-title="Indoor 10"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2010"
+     data-name="Indoor10">
+
+<img src="Indoor11.webp"
+     data-full="Indoor11.webp"
+     data-title="Indoor 11"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2011"
+     data-name="Indoor11">
+
+<img src="Indoor12.webp"
+     data-full="Indoor12.webp"
+     data-title="Indoor 12"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2012"
+     data-name="Indoor12">
+
+<img src="Indoor13.webp"
+     data-full="Indoor13.webp"
+     data-title="Indoor 13"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2013"
+     data-name="Indoor13">
+
+<img src="Indoor14.webp"
+     data-full="Indoor14.webp"
+     data-title="Indoor 14"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2014"
+     data-name="Indoor14">
+
+<img src="Indoor15.webp"
+     data-full="Indoor15.webp"
+     data-title="Indoor 15"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2015"
+     data-name="Indoor15">
+
+<img src="Indoor16.webp"
+     data-full="Indoor16.webp"
+     data-title="Indoor 16"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2016"
+     data-name="Indoor16">
+
+<img src="Indoor17.webp"
+     data-full="Indoor17.webp"
+     data-title="Indoor 17"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2017"
+     data-name="Indoor17">
+
+<img src="Indoor18.webp"
+     data-full="Indoor18.webp"
+     data-title="Indoor 18"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2018"
+     data-name="Indoor18">
+
+<img src="Indoor19.webp"
+     data-full="Indoor19.webp"
+     data-title="Indoor 19"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2019"
+     data-name="Indoor19">
+
+<img src="Indoor20.webp"
+     data-full="Indoor20.webp"
+     data-title="Indoor 20"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2020"
+     data-name="Indoor20">
+
+<img src="Indoor21.webp"
+     data-full="Indoor21.webp"
+     data-title="Indoor 21"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2021"
+     data-name="Indoor21">
+
+<img src="Indoor22.webp"
+     data-full="Indoor22.webp"
+     data-title="Indoor 22"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2022"
+     data-name="Indoor22">
+
+<img src="Indoor23.webp"
+     data-full="Indoor23.webp"
+     data-title="Indoor 23"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2023"
+     data-name="Indoor23">
+
+<img src="Indoor24.webp"
+     data-full="Indoor24.webp"
+     data-title="Indoor 24"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2024"
+     data-name="Indoor24">
+
+<img src="Indoor25.webp"
+     data-full="Indoor25.webp"
+     data-title="Indoor 25"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2025"
+     data-name="Indoor25">
+
+<img src="Indoor26.webp"
+     data-full="Indoor26.webp"
+     data-title="Indoor 26"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2026"
+     data-name="Indoor26">
+
+<img src="Indoor27.webp"
+     data-full="Indoor27.webp"
+     data-title="Indoor 27"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2027"
+     data-name="Indoor27">
+
+<img src="Indoor28.webp"
+     data-full="Indoor28.webp"
+     data-title="Indoor 28"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2028"
+     data-name="Indoor28">
+
+<img src="Indoor29.webp"
+     data-full="Indoor29.webp"
+     data-title="Indoor 29"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2029"
+     data-name="Indoor29">
+
+<img src="Indoor30.webp"
+     data-full="Indoor30.webp"
+     data-title="Indoor 30"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2030"
+     data-name="Indoor30">
+
+<img src="Indoor31.webp"
+     data-full="Indoor31.webp"
+     data-title="Indoor 31"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2031"
+     data-name="Indoor31">
+
+<img src="Indoor32.webp"
+     data-full="Indoor32.webp"
+     data-title="Indoor 32"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2032"
+     data-name="Indoor32">
+
+<img src="Indoor33.webp"
+     data-full="Indoor33.webp"
+     data-title="Indoor 33"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2033"
+     data-name="Indoor33">
+
+<img src="Indoor34.webp"
+     data-full="Indoor34.webp"
+     data-title="Indoor 34"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2034"
+     data-name="Indoor34">
+
+<img src="Indoor35.webp"
+     data-full="Indoor35.webp"
+     data-title="Indoor 35"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2035"
+     data-name="Indoor35">
+
+<img src="Indoor36.webp"
+     data-full="Indoor36.webp"
+     data-title="Indoor 36"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2036"
+     data-name="Indoor36">
+
+<img src="Indoor38.webp"
+     data-full="Indoor38.webp"
+     data-title="Indoor 38"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2038"
+     data-name="Indoor38">
+
+<img src="Indoor39.webp"
+     data-full="Indoor39.webp"
+     data-title="Indoor 39"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2039"
+     data-name="Indoor39">
+
+<img src="Indoor40.webp"
+     data-full="Indoor40.webp"
+     data-title="Indoor 40"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2040"
+     data-name="Indoor40">
+
+<img src="Indoor41.webp"
+     data-full="Indoor41.webp"
+     data-title="Indoor 41"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2041"
+     data-name="Indoor41">
+
+<img src="Indoor42.webp"
+     data-full="Indoor42.webp"
+     data-title="Indoor 42"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2042"
+     data-name="Indoor42">
+
+<img src="Indoor43.webp"
+     data-full="Indoor43.webp"
+     data-title="Indoor 43"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2043"
+     data-name="Indoor43">
+
+<img src="Indoor44.webp"
+     data-full="Indoor44.webp"
+     data-title="Indoor 44"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2044"
+     data-name="Indoor44">
+
+<img src="Indoor45.webp"
+     data-full="Indoor45.webp"
+     data-title="Indoor 45"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2045"
+     data-name="Indoor45">
+
+<img src="Indoor46.webp"
+     data-full="Indoor46.webp"
+     data-title="Indoor 46"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2046"
+     data-name="Indoor46">
+
+<img src="Indoor47.webp"
+     data-full="Indoor47.webp"
+     data-title="Indoor 47"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Indoor%2047"
+     data-name="Indoor47">
+    </div>
+  </article>
+  <script>
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const mainImg = document.getElementById("mainImage");
+    const title = document.getElementById("productTitle");
+    const detailsBtn = document.getElementById("detailsBtn");
+
+    thumbs.forEach(img => {
+      img.addEventListener('click', () => {
+        thumbs.forEach(t => t.classList.remove("active"));
+        img.classList.add("active");
+
+        mainImg.src = img.dataset.full;
+        title.textContent = img.dataset.title;
+        detailsBtn.href = img.dataset.link; // يتغير اللينك
+      });
+    });
+    const searchbox = document.getElementById("searchbox");
+const products = document.querySelectorAll("img[data-name]");
+
+searchbox.addEventListener("input", () => {
+  const value = searchbox.value.toLowerCase();
+
+  products.forEach(product => {
+    const text = product.dataset.name.toLowerCase();
+    if (text.includes(value)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+  </script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indoor</title>
+  <style>
+    nav {
+      background: #703800;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 1000;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    h1 { color: #FFFFFF; text-align: center; }
+    .logo {
+      height: 5rem; width: 5rem; border-radius: 3rem;
+      position: fixed; top: 1.5rem ; left: 1rem ;
+    }
+
+    .gallery { margin-top: 2rem; }
+
+    .main-view { text-align: center; }
+    .main-view img {
+      height: auto; width: 100%; max-width: 600px;
+      border-radius: 0.5rem; margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .product-info { text-align: center; margin-bottom: 1rem; }
+    .product-info h2 { color: #703800; margin-bottom: 1rem; }
+    .btn {
+      background: #9D4F00; color: #fff; border: none;
+      padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;
+      text-decoration: none; display: inline-block;
+    }
+    .btn:hover { background: #703800; }
+
+    input {
+      text-align: center;
+      margin: 1rem auto;
+      display: block;
+      width: 13rem;
+      height: 2rem;
+    }
+
+    /* Carousel */
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .thumbnails {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 1rem;
+    }
+    .thumbnails img {
+      height: 4rem; width: 4rem; cursor: pointer;
+      border: 2px solid transparent; border-radius: 0.5rem;
+      flex-shrink: 0;
+    }
+    .thumbnails img.active { border: 2px solid #703800; }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+    .arrow.left { left: 0.5rem; }
+    .arrow.right { right: 0.5rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="Logo.webp" class="logo" alt="Logo">
+    <h1>Outdoor</h1>
+  </nav>
+
+  <input type="text" id="searchbox" placeholder="search with number or name">
+
+  <div class="main-view">
+    <img id="mainImage" src="Outdoor01.webp" alt="Main Product">
+  </div>
+
+  <div class="product-info">
+    <h2 id="productTitle">Outdoor 01</h2>
+    <a id="detailsBtn" href="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%Outdoor%2001" class="btn" target="_blank">Ask for details</a>
+  </div>
+
+  <section class="gallery">
+    <div class="carousel-wrapper">
+      <button class="arrow left">&#10094;</button>
+      <div class="thumbnails">
+        <!-- كرر الصور هنا Indoor01.webp لحد Indoor47.webp -->
+        <img src="Outdoor01.webp"
+             data-full="Outdoor01.webp"
+             data-title="Outdoor 01"
+             data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2001"
+             data-name="Outdoor01"
+             class="active">
+
+     <img src="Outdoor02.webp"
+     data-full="Outdoor02.webp"
+     data-title="Outdoor 02"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2002"
+     data-name="Outdoor02">
+
+<img src="Outdoor03.webp"
+     data-full="Outdoor03.webp"
+     data-title="Outdoor 03"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2003"
+     data-name="Outdoor03">
+
+<img src="Outdoor04.webp"
+     data-full="Outdoor04.webp"
+     data-title="Outdoor 04"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2004"
+     data-name="Outdoor04">
+
+<img src="Outdoor05.webp"
+     data-full="Outdoor05.webp"
+     data-title="Outdoor 05"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2005"
+     data-name="Outdoor05">
+
+<img src="Outdoor06.webp"
+     data-full="Outdoor06.webp"
+     data-title="Outdoor 06"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2006"
+     data-name="Outdoor06">
+
+<img src="Outdoor07.webp"
+     data-full="Outdoor07.webp"
+     data-title="Outdoor 07"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2007"
+     data-name="Outdoor07">
+
+<img src="Outdoor08.webp"
+     data-full="Outdoor08.webp"
+     data-title="Outdoor 08"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2008"
+     data-name="Outdoor08">
+
+<img src="Outdoor09.webp"
+     data-full="Outdoor09.webp"
+     data-title="Outdoor 09"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2009"
+     data-name="Outdoor09">
+
+<img src="Outdoor10.webp"
+     data-full="Outdoor10.webp"
+     data-title="Outdoor 10"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2010"
+     data-name="Outdoor10">
+
+<img src="Outdoor11.webp"
+     data-full="Outdoor11.webp"
+     data-title="Outdoor 11"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2011"
+     data-name="Outdoor11">
+
+<img src="Outdoor12.webp"
+     data-full="Outdoor12.webp"
+     data-title="Outdoor 12"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2012"
+     data-name="Outdoor12">
+
+<img src="Outdoor13.webp"
+     data-full="Outdoor13.webp"
+     data-title="Outdoor 13"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2013"
+     data-name="Outdoor13">
+
+<img src="Outdoor14.webp"
+     data-full="Outdoor14.webp"
+     data-title="Outdoor 14"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2014"
+     data-name="Outdoor14">
+
+<img src="Outdoor15.webp"
+     data-full="Outdoor15.webp"
+     data-title="Outdoor 15"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2015"
+     data-name="Outdoor15">
+
+<img src="Outdoor16.webp"
+     data-full="Outdoor16.webp"
+     data-title="Outdoor 16"
+     data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Outdoor%2016"
+     data-name="Outdoor16">
+    </div>
+
+      </div>
+      <button class="arrow right">&#10095;</button>
+    </div>
+  </section>
+
+  <script>
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const mainImg = document.getElementById("mainImage");
+    const title = document.getElementById("productTitle");
+    const detailsBtn = document.getElementById("detailsBtn");
+    const thumbnails = document.querySelector(".thumbnails");
+
+    // click to change main image
+    thumbs.forEach(img => {
+      img.addEventListener("click", () => {
+        thumbs.forEach(t => t.classList.remove("active"));
+        img.classList.add("active");
+
+        mainImg.src = img.dataset.full;
+        title.textContent = img.dataset.title;
+        detailsBtn.href = img.dataset.link;
+      });
+    });
+
+    // arrows scroll
+    document.querySelector(".arrow.left").addEventListener("click", () => {
+      thumbnails.scrollBy({ left: -200, behavior: "smooth" });
+    });
+    document.querySelector(".arrow.right").addEventListener("click", () => {
+      thumbnails.scrollBy({ left: 200, behavior: "smooth" });
+    });
+
+    // search filter
+    const searchbox = document.getElementById("searchbox");
+    searchbox.addEventListener("input", () => {
+      const value = searchbox.value.toLowerCase();
+      thumbs.forEach(product => {
+        const text = product.dataset.name.toLowerCase();
+        product.style.display = text.includes(value) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
