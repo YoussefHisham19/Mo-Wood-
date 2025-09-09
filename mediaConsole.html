@@ -1,0 +1,886 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media Console</title>
+  <style>
+    nav {
+      background: #703800;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 1000;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    h1 { color: #FFFFFF; text-align: center; }
+    .logo {
+      height: 5rem; width: 5rem; border-radius: 3rem;
+      position: absolute; top: 0; left: 0;
+    }
+    .gallery {
+      display: flex; flex-direction: column; align-items: center; margin-top: 2rem;
+    }
+    .thumbnails {
+      display: flex; gap: 1rem; margin-bottom: 1rem;
+    }
+    .thumbnails img {
+      height: 3rem; width: 3rem; cursor: pointer;
+      border: 2px solid transparent; 
+      border-radius: 0.5rem;
+    }
+    .thumbnails img.active { border: 2px solid #703800; }
+    .main-view img {
+      height: auto; width: 100%; border-radius: 0.5rem; margin-bottom: 1rem;
+    }
+    .product-info { text-align: center; }
+    .product-info h2 { color: #703800; margin-bottom: 1rem; }
+    .btn {
+      background: #9D4F00; color: #fff; border: none;
+      padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;
+      text-decoration: none; /* عشان يبقى شكل زرار مش لينك */
+      display: inline-block;
+    }
+    .btn:hover { background: #703800; }
+    input{
+      text-align: center ;
+      margin-left: 35% ;
+      margin-top: 1rem ;
+      width: 13rem ;
+      height:2rem ;
+    }
+   .gallery .thumbnails{
+   display:flex ;
+   flex-wrap:wrap ;
+   justify-content:center ;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="Logo.webp" class="logo" alt="Logo">
+    <h1>Media Console</h1>
+  </nav>
+<input type="text" id="searchbox" placeholder="search with number or name">
+ 
+    <div class="main-view">
+      <img id="mainImage" src="mediaconsole01.webp" alt="Main Product">
+    </div>
+
+    <div class="product-info">
+      <h2 id="productTitle">Media Console 01</h2>
+      <a id="detailsBtn" href="https://wa.me/201157639159?text=أنا%20مهتم%20بـ%20Media%20Console%2001" class="btn" target="_blank">Ask for details</a>
+    </div>
+     <article class="gallery">
+    <div class="thumbnails">
+      <img src="mediaconsole01.webp"
+           data-full="mediaconsole01.webp"
+           data-title="Media Console01"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2001"
+           class="active" data-name="Media Console01">
+
+      <img src="mediaconsole02.webp"
+           data-full="mediaconsole02.webp"
+           data-title="Media Console 02"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2002" data-name="Media Console02">
+
+      <img src="mediaconsole03.webp"
+           data-full="mediaconsole03.webp"
+           data-title="Media Console 03"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2003" data-name="Media Console03">
+                 <img src="mediaconsole04.webp"
+           data-full="mediaconsole04.webp"
+           data-title="Media Console 04"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2004" data-name="Media Console04">
+                 <img src="mediaconsole05.webp"
+           data-full="mediaconsole05.webp"
+           data-title="Media Console 05"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2005" data-name="Media Console05">
+                 <img src="mediaconsole06.webp"
+           data-full="mediaconsole06.webp"
+           data-title="Media Console 06"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2006" data-name="Media Console06">
+                 <img src="mediaconsole07.webp"
+           data-full="mediaconsole07.webp"
+           data-title="Media Console 07"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2007" data-name="Media Console07">
+                 <img src="mediaconsole08.webp"
+           data-full="mediaconsole08.webp"
+           data-title="Media Console 08"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2008" data-name="Media Console08">
+                 <img src="mediaconsole09.webp"
+           data-full="mediaconsole09.webp"
+           data-title="Media Console 09"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2009" data-name="Media Console09">      <img src="mediaconsole10.webp"
+           data-full="mediaconsole10.webp"
+           data-title="Media Console 10"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2010" data-name="Media Console10">
+                 <img src="mediaconsole11.webp"
+           data-full="mediaconsole11.webp"
+           data-title="Media Console 11"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2011" data-name="Media Console11">
+                 <img src="mediaconsole12.webp"
+           data-full="mediaconsole12.webp"
+           data-title="Media Console 12"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2012" data-name="Media Console12">
+                 <img src="mediaconsole13.webp"
+           data-full="mediaconsole13.webp"
+           data-title="Media Console 13"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2013" data-name="Media Console13">      <img src="mediaconsole14.webp"
+           data-full="mediaconsole14.webp"
+           data-title="Media Console 14"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2014" data-name="Media Console14">
+                 <img src="mediaconsole15.webp"
+           data-full="mediaconsole15.webp"
+           data-title="Media Console 15"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2015" data-name="Media Console15">
+                 <img src="mediaconsole16.webp"
+           data-full="mediaconsole16.webp"
+           data-title="Media Console 16"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2016" data-name="Media Console16">
+                 <img src="mediaconsole17.webp"
+           data-full="mediaconsole17.webp"
+           data-title="Media Console 17"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2017" data-name="Media Console17">
+                 <img src="mediaconsole18.webp"
+           data-full="mediaconsole18.webp"
+           data-title="Media Console 18"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2018" data-name="Media Console18">
+           
+                 <img src="mediaconsole19.webp"
+           data-full="mediaconsole19.webp"
+           data-title="Media Console 19"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2019" data-name="Media Console19">
+                 <img src="mediaconsole20.webp"
+           data-full="mediaconsole20.webp"
+           data-title="Media Console 20"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2020" data-name="Media Console20">
+                 <img src="mediaconsole21.webp"
+           data-full="mediaconsole21.webp"
+           data-title="Media Console 21"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2021" data-name="Media Console21">
+                 <img src="mediaconsole22.webp"
+           data-full="mediaconsole22.webp"
+           data-title="Media Console 22"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2022" data-name="Media Console22">
+                 <img src="mediaconsole23.webp"
+           data-full="mediaconsole23.webp"
+           data-title="Media Console 23"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2023" data-name="Media Console23">
+           
+                 <img src="mediaconsole24.webp"
+           data-full="mediaconsole24.webp"
+           data-title="Media Console 24"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2024" data-name="Media Console24">
+                 <img src="mediaconsole25.webp"
+           data-full="mediaconsole25.webp"
+           data-title="Media Console 25"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2025" data-name="Media Console25">
+                 <img src="mediaconsole26.webp"
+           data-full="mediaconsole26.webp"
+           data-title="Media Console 26"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2026" data-name="Media Console26">
+                 <img src="mediaconsole27.webp"
+           data-full="mediaconsole27.webp"
+           data-title="Media Console 27"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2027" data-name="Media Console27">
+                 <img src="mediaconsole28.webp"
+           data-full="mediaconsole28.webp"
+           data-title="Media Console 28"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2028" data-name="Media Console28">
+                 <img src="mediaconsole29.webp"
+           data-full="mediaconsole29.webp"
+           data-title="Media Console 29"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2029" data-name="Media Console29">
+                 <img src="mediaconsole30.webp"
+           data-full="mediaconsole30.webp"
+           data-title="Media Console 30"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2030" data-name="Media Console30">
+                 <img src="mediaconsole31.webp"
+           data-full="mediaconsole31.webp"
+           data-title="Media Console 31"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2031" data-name="Media Console31">
+                 <img src="mediaconsole32.webp"
+           data-full="mediaconsole32.webp"
+           data-title="Media Console 32"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2032" data-name="Media Console32">
+                 <img src="mediaconsole33.webp"
+           data-full="mediaconsole33.webp"
+           data-title="Media Console 33"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2033" data-name="Media Console33">      <img src="mediaconsole34.webp"
+           data-full="mediaconsole34.webp"
+           data-title="Media Console 34"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2034" data-name="Media Console34">
+                 <img src="mediaconsole35.webp"
+           data-full="mediaconsole35.webp"
+           data-title="Media Console 35"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2035" data-name="Media Console35">
+                 <img src="mediaconsole36.webp"
+           data-full="mediaconsole36.webp"
+           data-title="Media Console 36"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2036" data-name="Media Console36">
+                 <img src="mediaconsole37.webp"
+           data-full="mediaconsole37.webp"
+           data-title="Media Console 37"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2037" data-name="Media Console37">
+                 <img src="mediaconsole38.webp"
+           data-full="mediaconsole38.webp"
+           data-title="Media Console 38"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2038" data-name="Media Console38">
+                 <img src="mediaconsole39.webp"
+           data-full="mediaconsole39.webp"
+           data-title="Media Console 39"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2039" data-name="Media Console39">
+           
+           
+           
+    </div>
+  </article>
+  <script>
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const mainImg = document.getElementById("mainImage");
+    const title = document.getElementById("productTitle");
+    const detailsBtn = document.getElementById("detailsBtn");
+
+    thumbs.forEach(img => {
+      img.addEventListener('click', () => {
+        thumbs.forEach(t => t.classList.remove("active"));
+        img.classList.add("active");
+
+        mainImg.src = img.dataset.full;
+        title.textContent = img.dataset.title;
+        detailsBtn.href = img.dataset.link; // يتغير اللينك
+      });
+    });
+    const searchbox = document.getElementById("searchbox");
+const products = document.querySelectorAll("img[data-name]");
+
+searchbox.addEventListener("input", () => {
+  const value = searchbox.value.toLowerCase();
+
+  products.forEach(product => {
+    const text = product.dataset.name.toLowerCase();
+    if (text.includes(value)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+  </script>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <title>Media Console</title>  
+  <style>  
+    nav {  
+      background: #703800;  
+      font-family: "Cormorant Garamond", serif;  
+      font-weight: 1000;  
+      height: 2rem;  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+      position: relative;  
+    }  
+    h1 { color: #FFFFFF; text-align: center; }  
+    .logo {  
+      height: 5rem; width: 5rem; border-radius: 3rem;  
+      position: absolute; top: 0; left: 0;  
+    }  
+    .gallery {  
+      display: flex; flex-direction: column; align-items: center; margin-top: 2rem;  
+    }  
+    .carousel-container {  
+      position: relative;  
+      width: 90%;  
+      overflow: hidden;  
+    }  
+    .thumbnails {  
+      display: flex;  
+      gap: 1rem;  
+      transition: transform 0.3s ease;  
+    }  
+    .thumbnails img {  
+      height: 3rem; width: 3rem; cursor: pointer;  
+      border: 2px solid transparent;   
+      border-radius: 0.5rem;  
+      flex-shrink: 0;  
+    }  
+    .thumbnails img.active { border: 2px solid #703800; }  
+
+    .carousel-btn {  
+      position: absolute;  
+      top: 50%;  
+      transform: translateY(-50%);  
+      background: #703800;  
+      color: #fff;  
+      border: none;  
+      padding: 0.5rem;  
+      cursor: pointer;  
+      border-radius: 50%;  
+    }  
+    .carousel-btn.left { left: -2rem; }  
+    .carousel-btn.right { right: -2rem; }  
+
+    .main-view img {  
+      height: auto; width: 100%; border-radius: 0.5rem; margin-bottom: 1rem;  
+    }  
+    .product-info { text-align: center; }  
+    .product-info h2 { color: #703800; margin-bottom: 1rem; }  
+    .btn {  
+      background: #9D4F00; color: #fff; border: none;  
+      padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;  
+      text-decoration: none;  
+      display: inline-block;  
+    }  
+    .btn:hover { background: #703800; }  
+    input{  
+      text-align: center ;  
+      margin-left: 35% ;  
+      margin-top: 1rem ;  
+      width: 13rem ;  
+      height:2rem ;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <nav>  
+    <img src="Logo.webp" class="logo" alt="Logo">  
+    <h1>Media Console</h1>  
+  </nav>  
+<input type="text" id="searchbox" placeholder="search with number or name">  
+
+<div class="main-view">  
+  <img id="mainImage" src="mediaconsole01.webp" alt="Main Product">  
+</div>  
+
+<div class="product-info">  
+  <h2 id="productTitle">Media Console 01</h2>  
+  <a id="detailsBtn" href="https://wa.me/201157639159?text=أنا%20مهتم%20بـ%20Media%20Console%2001" class="btn" target="_blank">Ask for details</a>  
+</div>  
+
+<article class="gallery">  
+  <div class="carousel-container">  
+    <button class="carousel-btn left">◀</button>
+<div class="thumbnails">  
+      <img src="mediaconsole01.webp" data-full="mediaconsole01.webp" data-title="Media Console 01" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2001" class="active" data-name="Media Console01">  
+      <img src="mediaconsole02.webp" data-full="mediaconsole02.webp" data-title="Media Console 02" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2002" data-name="Media Console02">  
+ <img src="mediaconsole03.webp"
+           data-full="mediaconsole03.webp"
+           data-title="Media Console 03"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2003" data-name="Media Console03">
+                 <img src="mediaconsole04.webp"
+           data-full="mediaconsole04.webp"
+           data-title="Media Console 04"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2004" data-name="Media Console04">
+                 <img src="mediaconsole05.webp"
+           data-full="mediaconsole05.webp"
+           data-title="Media Console 05"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2005" data-name="Media Console05">
+                 <img src="mediaconsole06.webp"
+           data-full="mediaconsole06.webp"
+           data-title="Media Console 06"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2006" data-name="Media Console06">
+                 <img src="mediaconsole07.webp"
+           data-full="mediaconsole07.webp"
+           data-title="Media Console 07"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2007" data-name="Media Console07">
+                 <img src="mediaconsole08.webp"
+           data-full="mediaconsole08.webp"
+           data-title="Media Console 08"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2008" data-name="Media Console08">
+                 <img src="mediaconsole09.webp"
+           data-full="mediaconsole09.webp"
+           data-title="Media Console 09"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2009" data-name="Media Console09">      <img src="mediaconsole10.webp"
+           data-full="mediaconsole10.webp"
+           data-title="Media Console 10"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2010" data-name="Media Console10">
+                 <img src="mediaconsole11.webp"
+           data-full="mediaconsole11.webp"
+           data-title="Media Console 11"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2011" data-name="Media Console11">
+                 <img src="mediaconsole12.webp"
+           data-full="mediaconsole12.webp"
+           data-title="Media Console 12"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2012" data-name="Media Console12">
+                 <img src="mediaconsole13.webp"
+           data-full="mediaconsole13.webp"
+           data-title="Media Console 13"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2013" data-name="Media Console13">      <img src="mediaconsole14.webp"
+           data-full="mediaconsole14.webp"
+           data-title="Media Console 14"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2014" data-name="Media Console14">
+                 <img src="mediaconsole15.webp"
+           data-full="mediaconsole15.webp"
+           data-title="Media Console 15"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2015" data-name="Media Console15">
+                 <img src="mediaconsole16.webp"
+           data-full="mediaconsole16.webp"
+           data-title="Media Console 16"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2016" data-name="Media Console16">
+                 <img src="mediaconsole17.webp"
+           data-full="mediaconsole17.webp"
+           data-title="Media Console 17"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2017" data-name="Media Console17">
+                 <img src="mediaconsole18.webp"
+           data-full="mediaconsole18.webp"
+           data-title="Media Console 18"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2018" data-name="Media Console18">
+           
+                 <img src="mediaconsole19.webp"
+           data-full="mediaconsole19.webp"
+           data-title="Media Console 19"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2019" data-name="Media Console19">
+                 <img src="mediaconsole20.webp"
+           data-full="mediaconsole20.webp"
+           data-title="Media Console 20"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2020" data-name="Media Console20">
+                 <img src="mediaconsole21.webp"
+           data-full="mediaconsole21.webp"
+           data-title="Media Console 21"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2021" data-name="Media Console21">
+                 <img src="mediaconsole22.webp"
+           data-full="mediaconsole22.webp"
+           data-title="Media Console 22"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2022" data-name="Media Console22">
+                 <img src="mediaconsole23.webp"
+           data-full="mediaconsole23.webp"
+           data-title="Media Console 23"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2023" data-name="Media Console23">
+           
+                 <img src="mediaconsole24.webp"
+           data-full="mediaconsole24.webp"
+           data-title="Media Console 24"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2024" data-name="Media Console24">
+                 <img src="mediaconsole25.webp"
+           data-full="mediaconsole25.webp"
+           data-title="Media Console 25"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2025" data-name="Media Console25">
+                 <img src="mediaconsole26.webp"
+           data-full="mediaconsole26.webp"
+           data-title="Media Console 26"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2026" data-name="Media Console26">
+                 <img src="mediaconsole27.webp"
+           data-full="mediaconsole27.webp"
+           data-title="Media Console 27"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2027" data-name="Media Console27">
+                 <img src="mediaconsole28.webp"
+           data-full="mediaconsole28.webp"
+           data-title="Media Console 28"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2028" data-name="Media Console28">
+                 <img src="mediaconsole29.webp"
+           data-full="mediaconsole29.webp"
+           data-title="Media Console 29"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2029" data-name="Media Console29">
+                 <img src="mediaconsole30.webp"
+           data-full="mediaconsole30.webp"
+           data-title="Media Console 30"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2030" data-name="Media Console30">
+                 <img src="mediaconsole31.webp"
+           data-full="mediaconsole31.webp"
+           data-title="Media Console 31"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2031" data-name="Media Console31">
+                 <img src="mediaconsole32.webp"
+           data-full="mediaconsole32.webp"
+           data-title="Media Console 32"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2032" data-name="Media Console32">
+                 <img src="mediaconsole33.webp"
+           data-full="mediaconsole33.webp"
+           data-title="Media Console 33"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2033" data-name="Media Console33">      <img src="mediaconsole34.webp"
+           data-full="mediaconsole34.webp"
+           data-title="Media Console 34"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2034" data-name="Media Console34">
+                 <img src="mediaconsole35.webp"
+           data-full="mediaconsole35.webp"
+           data-title="Media Console 35"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2035" data-name="Media Console35">
+                 <img src="mediaconsole36.webp"
+           data-full="mediaconsole36.webp"
+           data-title="Media Console 36"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2036" data-name="Media Console36">
+                 <img src="mediaconsole37.webp"
+           data-full="mediaconsole37.webp"
+           data-title="Media Console 37"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2037" data-name="Media Console37">
+                 <img src="mediaconsole38.webp"
+           data-full="mediaconsole38.webp"
+           data-title="Media Console 38"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2038" data-name="Media Console38">
+                 <img src="mediaconsole39.webp"
+           data-full="mediaconsole39.webp"
+           data-title="Media Console 39"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2039" data-name="Media Console39">
+           
+    </div>  
+
+ 
+</div>
+<button class="carousel-btn right">▶</button>
+
+  </div>  
+</article>  
+
+<script>  
+const thumbs = document.querySelectorAll(".thumbnails img");
+const mainImg = document.getElementById("mainImage");
+const title = document.getElementById("productTitle");
+const detailsBtn = document.getElementById("detailsBtn");
+
+thumbs.forEach(img => {
+  img.addEventListener("click", () => {
+    thumbs.forEach(t => t.classList.remove("active"));
+    img.classList.add("active");
+
+    mainImg.src = img.dataset.full;
+    title.textContent = img.dataset.title;
+    detailsBtn.href = img.dataset.link;
+  });
+});
+
+ 
+const searchbox = document.getElementById("searchbox");
+const products = document.querySelectorAll("img[data-name]");
+
+searchbox.addEventListener("input", () => {
+  const value = searchbox.value.toLowerCase();
+
+  products.forEach(product => {
+    const text = product.dataset.name.toLowerCase();
+    if (text.includes(value)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+
+// التحكم في الكاروسيل بالأسهم
+const thumbsContainer = document.querySelector(".thumbnails");
+const leftBtn = document.querySelector(".carousel-btn.left");
+const rightBtn = document.querySelector(".carousel-btn.right");
+
+leftBtn.addEventListener("click", () => {
+  thumbsContainer.scrollBy({ left: -150, behavior: "smooth" });
+});
+
+rightBtn.addEventListener("click", () => {
+  thumbsContainer.scrollBy({ left: 150, behavior: "smooth" });
+});
+</script>  
+</body>  
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media Console Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+    }
+    nav {
+      background: #703800;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .gallery {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    #mainImage {
+      width: 300px; height: auto;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .carousel-container {
+      position: relative;
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .thumbnails {
+      display: flex;
+      gap: 0.5rem;
+      transition: transform 0.3s ease;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    .thumbnails img {
+      width: 60px; height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      flex-shrink: 0;
+    }
+    .thumbnails img.active {
+      border: 2px solid #703800;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #703800;
+      color: #fff;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .carousel-btn.left { left: -2rem; }
+    .carousel-btn.right { right: -2rem; }
+    #searchbox {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.5rem;
+      width: 50%;
+      max-width: 300px;
+    }
+    #productTitle {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    #detailsBtn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #703800;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>Media Console </nav>
+
+  <input type="text" id="searchbox" placeholder="ابحث باسم المنتج أو رقمه...">
+
+  <div class="gallery">
+    <img id="mainImage" src="mediaconsole01.webp" alt="Main Product" loading="lazy">
+    <h2 id="productTitle">Media Console 01</h2>
+    <a id="detailsBtn" href="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2001" target="_blank">تفاصيل</a>
+  </div>
+
+  <div class="carousel-container">
+    <button class="carousel-btn left">◀</button>
+   <div class="thumbnails">  
+      <img src="mediaconsole01.webp" data-full="mediaconsole01.webp" data-title="Media Console 01" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2001" class="active" data-name="Media Console01" loading="lazy">  
+      <img src="mediaconsole02.webp" data-full="mediaconsole02.webp" data-title="Media Console 02" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2002" data-name="Media Console02" loading="lazy">  
+ <img src="mediaconsole03.webp"
+           data-full="mediaconsole03.webp"
+           data-title="Media Console 03"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2003" data-name="Media Console03" loading="lazy">
+                 <img src="mediaconsole04.webp"
+           data-full="mediaconsole04.webp"
+           data-title="Media Console 04"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2004" data-name="Media Console04" loading="lazy">
+                 <img src="mediaconsole05.webp"
+           data-full="mediaconsole05.webp"
+           data-title="Media Console 05"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2005" data-name="Media Console05" loading="lazy">
+                 <img src="mediaconsole06.webp"
+           data-full="mediaconsole06.webp"
+           data-title="Media Console 06"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2006" data-name="Media Console06" loading="lazy">
+                 <img src="mediaconsole07.webp"
+           data-full="mediaconsole07.webp"
+           data-title="Media Console 07"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2007" data-name="Media Console07" loading="lazy">
+                 <img src="mediaconsole08.webp"
+           data-full="mediaconsole08.webp"
+           data-title="Media Console 08"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2008" data-name="Media Console08" loading="lazy">
+                 <img src="mediaconsole09.webp"
+           data-full="mediaconsole09.webp"
+           data-title="Media Console 09"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2009" data-name="Media Console09">      <img src="mediaconsole10.webp"
+           data-full="mediaconsole10.webp"
+           data-title="Media Console 10"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2010" data-name="Media Console10" loading="lazy">
+                 <img src="mediaconsole11.webp"
+           data-full="mediaconsole11.webp"
+           data-title="Media Console 11"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2011" data-name="Media Console11" loading="lazy">
+                 <img src="mediaconsole12.webp"
+           data-full="mediaconsole12.webp"
+           data-title="Media Console 12"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2012" data-name="Media Console12" loading="lazy">
+                 <img src="mediaconsole13.webp"
+           data-full="mediaconsole13.webp"
+           data-title="Media Console 13"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2013" data-name="Media Console13">      <img src="mediaconsole14.webp"
+           data-full="mediaconsole14.webp"
+           data-title="Media Console 14"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2014" data-name="Media Console14" loading="lazy">
+                 <img src="mediaconsole15.webp"
+           data-full="mediaconsole15.webp"
+           data-title="Media Console 15"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2015" data-name="Media Console15" loading="lazy">
+                 <img src="mediaconsole16.webp"
+           data-full="mediaconsole16.webp"
+           data-title="Media Console 16"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2016" data-name="Media Console16" loading="lazy">
+                 <img src="mediaconsole17.webp"
+           data-full="mediaconsole17.webp"
+           data-title="Media Console 17"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2017" data-name="Media Console17" loading="lazy">
+                 <img src="mediaconsole18.webp"
+           data-full="mediaconsole18.webp"
+           data-title="Media Console 18"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2018" data-name="Media Console18" loading="lazy">
+           
+                 <img src="mediaconsole19.webp"
+           data-full="mediaconsole19.webp"
+           data-title="Media Console 19"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2019" data-name="Media Console19" loading="lazy">
+                 <img src="mediaconsole20.webp"
+           data-full="mediaconsole20.webp"
+           data-title="Media Console 20"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2020" data-name="Media Console20"loading="lazy">
+                 <img src="mediaconsole21.webp"
+           data-full="mediaconsole21.webp"
+           data-title="Media Console 21"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2021" data-name="Media Console21" loading="lazy">
+                 <img src="mediaconsole22.webp"
+           data-full="mediaconsole22.webp"
+           data-title="Media Console 22"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2022" data-name="Media Console22" loading="lazy">
+                 <img src="mediaconsole23.webp"
+           data-full="mediaconsole23.webp"
+           data-title="Media Console 23"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2023" data-name="Media Console23" loading="lazy">
+           
+                 <img src="mediaconsole24.webp"
+           data-full="mediaconsole24.webp"
+           data-title="Media Console 24"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2024" data-name="Media Console24" loading="lazy">
+                 <img src="mediaconsole25.webp"
+           data-full="mediaconsole25.webp"
+           data-title="Media Console 25"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2025" data-name="Media Console25" loading="lazy">
+                 <img src="mediaconsole26.webp"
+           data-full="mediaconsole26.webp"
+           data-title="Media Console 26"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2026" data-name="Media Console26" loading="lazy">
+                 <img src="mediaconsole27.webp"
+           data-full="mediaconsole27.webp"
+           data-title="Media Console 27"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2027" data-name="Media Console27" loading="lazy">
+                 <img src="mediaconsole28.webp"
+           data-full="mediaconsole28.webp"
+           data-title="Media Console 28"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2028" data-name="Media Console28" loading="lazy">
+                 <img src="mediaconsole29.webp"
+           data-full="mediaconsole29.webp"
+           data-title="Media Console 29"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2029" data-name="Media Console29" loading="lazy">
+                 <img src="mediaconsole30.webp"
+           data-full="mediaconsole30.webp"
+           data-title="Media Console 30"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2030" data-name="Media Console30" loading="lazy">
+                 <img src="mediaconsole31.webp"
+           data-full="mediaconsole31.webp"
+           data-title="Media Console 31"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2031" data-name="Media Console31" loading="lazy">
+                 <img src="mediaconsole32.webp"
+           data-full="mediaconsole32.webp"
+           data-title="Media Console 32"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2032" data-name="Media Console32" loading="lazy">
+                 <img src="mediaconsole33.webp"
+           data-full="mediaconsole33.webp"
+           data-title="Media Console 33"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2033" data-name="Media Console33" loading="lazy">      <img src="mediaconsole34.webp"
+           data-full="mediaconsole34.webp"
+           data-title="Media Console 34"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2034" data-name="Media Console34" loading="lazy">
+                 <img src="mediaconsole35.webp"
+           data-full="mediaconsole35.webp"
+           data-title="Media Console 35"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2035" data-name="Media Console35" loading="lazy">
+                 <img src="mediaconsole36.webp"
+           data-full="mediaconsole36.webp"
+           data-title="Media Console 36"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2036" data-name="Media Console36" loading="lazy">
+                 <img src="mediaconsole37.webp"
+           data-full="mediaconsole37.webp"
+           data-title="Media Console 37"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2037" data-name="Media Console37" loading="lazy">
+                 <img src="mediaconsole38.webp"
+           data-full="mediaconsole38.webp"
+           data-title="Media Console 38"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2038" data-name="Media Console38" loading="lazy">
+                 <img src="mediaconsole39.webp"
+           data-full="mediaconsole39.webp"
+           data-title="Media Console 39"
+           data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Media%20Console%2039" data-name="Media Console39" loading="lazy">
+           
+    </div>  
+
+ 
+</div>
+<button class="carousel-btn right">▶</button>
+
+  </div>  
+    <button class="carousel-btn right">▶</button>
+  </div>
+
+  <script>
+    // تغيير الصورة الرئيسية عند الضغط
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const mainImg = document.getElementById("mainImage");
+    const title = document.getElementById("productTitle");
+    const detailsBtn = document.getElementById("detailsBtn");
+
+    thumbs.forEach(img => {
+      img.addEventListener("click", () => {
+        thumbs.forEach(t => t.classList.remove("active"));
+        img.classList.add("active");
+
+        mainImg.src = img.dataset.full;
+        title.textContent = img.dataset.title;
+        detailsBtn.href = img.dataset.link;
+      });
+    });
+
+    // البحث
+    const searchbox = document.getElementById("searchbox");
+    searchbox.addEventListener("input", () => {
+      const value = searchbox.value.toLowerCase();
+      thumbs.forEach(product => {
+        const text = product.dataset.name.toLowerCase();
+        product.style.display = text.includes(value) ? "block" : "none";
+      });
+    });
+
+    // الكاروسيل يمين وشمال
+    const thumbsContainer = document.querySelector(".thumbnails");
+    const leftBtn = document.querySelector(".carousel-btn.left");
+    const rightBtn = document.querySelector(".carousel-btn.right");
+
+    leftBtn.addEventListener("click", () => {
+      thumbsContainer.scrollBy({ left: -150, behavior: "smooth" });
+    });
+
+    rightBtn.addEventListener("click", () => {
+      thumbsContainer.scrollBy({ left: 150, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
