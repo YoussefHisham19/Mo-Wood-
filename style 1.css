@@ -1,0 +1,168 @@
+
+.logo{
+  height:5rem;
+  width: 5rem ;
+  border-radius:3rem ;
+  padding: 0;
+  position:fixed ;
+  top:0 ;
+  left:0;
+}
+.logo01{
+  height:4rem ;
+  width: 4rem ;
+}
+nav{
+  background:#703800;
+  
+}
+h1{
+  color :#FFFFFF ;
+
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 1000 ;
+  font-style: normal;
+  text-align:center ;
+}
+#hook{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+}
+@media(max-width:992px){
+  header{
+  background: #000000 url("Back03.webp") 0 0 no-repeat;
+  background-size:cover ;
+  height:30rem ;
+  background-position: center ;
+  align-content: center ;
+} 
+#hook p{
+  font-size:2rem ;
+}
+#hook a{
+  font-size:1.5rem ;
+}
+a img {
+  height: 50rem;
+  width: 55rem;
+  object-fit:cover ;
+}
+.type p{
+  height:5rem ;
+  font-size:2rem ;
+display:flex ;
+}
+.type p img{
+  width:1rem ;
+  height:1rem ;
+  background:#000000 ;
+  border-radius:3rem ;
+}
+#contact img{
+  height:5rem ;
+  width:5rem ;
+}
+}
+@media(max-width:600px ){
+  header {
+  background: #FFF url("Back03.webp") 0 0 no-repeat;
+  background-size: cover;
+  height: 15rem;
+  background-position: center;
+  align-content: center;
+  
+}
+#hook p{
+  font-size:1rem ;
+}
+#hook a{
+  font-size:.75rem ;
+}
+a img{
+  height:15rem;
+  width:20rem;
+}
+.type p{
+  margin-top:0;
+  margin-bottom:  1rem ;
+  font-size:1rem ;
+}
+.type p img{
+  width:1rem ;
+  height:1rem ;
+  background:#000000 ;
+  border-radius:3rem ;
+}
+#contact img {
+  height: 4rem;
+  width: 4rem;
+}
+}
+b{
+  font-size : 2rem ;
+}
+header {
+text-align:center ;
+  
+}
+header p{
+  color : mintcream;
+   font-size:1rem ;
+  font-weight:1000 ;
+}
+a{
+  text-decoration:none ;
+}
+header a{
+  background:#FFFFFF;
+  color:#703800;
+  padding:0.5rem ;
+  border-radius:1rem ;
+  font-weight:bold ;
+  transition:0.3s ;
+}
+header a:hover{
+  color:#FFFFFF ;
+  background:#703800;
+  box-shadow:0 0 1rem #000000;
+}
+article{
+  margin-top:8rem ;
+  display:flex ;
+  justify-content:center ;
+  flex-wrap:wrap ;
+  gap: 0.5rem ;
+}
+article h3{
+  width:10rem ;
+  border-bottom: 5px solid #DAD7BB;
+}
+
+.type p{
+  color:#000000 ;
+}
+#contact {
+  display:flex ;
+  flex-direction:column ;
+  position:fixed ;
+  bottom: 0 ;
+  right:0 ;
+}
+#contact img{
+  border-radius:3rem ;
+}
+.locations{
+  border-radius: 1rem ;
+  width:10rem ;
+  transition: 0.3s ;
+}
+.locations a{
+  color:#FFFFFF ;
+  font-size:1rem  ;
+}
+.locations a:hover{
+  color: #703800;
+}
