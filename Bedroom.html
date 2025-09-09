@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dressing rooms</title>
+  <style>
+    /* --- Navbar --- */
+    nav {
+      background: #703800;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 1000;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 3rem;
+      position: fixed;
+      top: 0;
+      left: 0.5rem;
+    }
+
+    h1 {
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    /* --- Search input --- */
+    input {
+      text-align: center;
+      margin-left: 35%;
+      margin-top: 1rem;
+      width: 13rem;
+      height: 2rem;
+    }
+
+    input:hover {
+      width: 15rem;
+      height: 3rem;
+      margin-left: 20%;
+    }
+
+    /* --- Products --- */
+    .product {
+      text-align: center;
+    }
+
+    .product img {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 2rem;
+    }
+
+    .product a {
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 1rem;
+      background: #ECE0D5;
+      color: #703800;
+      font-weight: 1000;
+      padding: 0.5rem;
+    }
+
+    /* --- Tabs --- */
+    #mainTabs {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    #mainTabs button {
+      border: none;
+      font-size: 1rem;
+      border-radius: 1rem;
+      background: #ECE0D5;
+      color: #703800;
+      font-weight: 1000;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    #mainTabs .active {
+      background: #703800;
+      color: #ECE0D5;
+      box-shadow: 0 0 1rem #703800;
+    }
+
+    #singlePieces {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    #readySets {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    /* --- Sidebar rooms --- */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1rem;
+      width: 20%;
+    }
+
+    .sidebar .room {
+      border: none;
+      font-size: 0.8rem;
+      border-radius: 1rem;
+      background: #ECE0D5;
+      color: #703800;
+      font-weight: 1000;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .sidebar .room.active {
+      background: #703800;
+      color: #ECE0D5;
+      box-shadow: 0 0 1rem #703800;
+    }
+
+    .sidebar .room:hover {
+      background: #9D4F00;
+      color: #fff;
+    }
+
+    .content {
+      width: 75%;
+    }
+
+    .tabContent {
+      display: none;
+      margin: 2rem 0;
+    }
+
+    /* --- Main image --- */
+    #mainImage {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #partsButtons button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      background: #ECE0D5;
+      color: #703800;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    #partsButtons button:hover {
+      background: #703800;
+      color: #fff;
+    }
+
+    /* --- Room info --- */
+    #roomInfo {
+      text-align: center;
+      margin: 1rem;
+    }
+
+    #roomInfo h2 {
+      color: #703800;
+      margin-bottom: 0.5rem;
+    }
+
+    #roomInfo p {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    #roomButton {
+      text-decoration: none;
+      padding: 0.5rem 0.5rem;
+      background: #9D4F00;
+      color: #fff;
+      border-radius: 0.5rem;
+      font-weight: bold;
+    }
+
+    #roomButton:hover {
+      background: #703800;
+    }
+   .content{
+     position :fixed ;
+     right:0.55rem ;
+     
+   }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="Logo.webp" class="logo" alt="Logo">
+    <h1>Bedroom</h1>
+  </nav>
+
+  <input type="text" id="searchbox" placeholder="search with number or name">
+
+  <div id="mainTabs">
+    <button class="active" id="singlePiecesBtn">Single pieces</button>
+    <button id="readySetsBtn">Ready sets</button>
+  </div>
+
+  <section id="singlePieces" class="tabContent">
+    <!-- منتجات فردية -->
+    <div class="product" data-name="Bed 01.webp">
+      <img src="Bed01.webp" alt="Bed01.webp">
+      <h3>Bed 01</h3>
+      <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%2001">Ask for details</a>
+    </div>
+    <div class="product" data-name="Bed 02">
+      <img src="Bed02.webp" alt="Bed02.webp">
+      <h3>Bed 02</h3>
+      <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%2002">Ask for details</a>
+    </div>
+    <div class="product" data-name="Bed 03">
+  <img src="Bed03.webp" alt="Bed 03.webp">
+  <h3>
+    Bed 03
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%2003">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="Bed 04">
+  <img src="Bed04.webp">
+  <h3>
+    Bed 04
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%2004">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="Bed 05">
+  <img src="Bed05.webp" alt="Bed 05.webp">
+  <h3>
+    Bed 05
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%2005">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="wardrobe 06">
+  <img src="Wardrobe01.webp" alt="Wardrobe01.webp">
+  <h3>
+   Wardrobe 01 
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2001">
+Ask for details 
+  </a>
+</div>
+<div class="product" data-name="wardrobe 02">
+  <img src="Wardrobe02.webp" alt="Wardrobe02.webp">
+  <h3>
+    Wardrobe 02
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2002">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="wardrobe 03">
+  <img src="Wardrobe03.webp" alt="Wardrobe03.webp">
+  <h3>
+   Wardrobe 03
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2003">
+Ask for details 
+  </a>
+</div>
+<div class="product" data-name="wardrobe 04">
+  <img src="Wardrobe04.webp" alt="Wardrobe04.webp">
+  <h3>
+   Wardrobe 04
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2004">
+Ask for details 
+  </a>
+</div>
+<div class="product" data-name="wardrobe 05">
+  <img src="Wardrobe05.webp" alt="Wardrobe05.webp">
+  <h3>
+   Wardrobe 05
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2005">
+Ask for details 
+  </a>
+</div>
+<div class="product" data-name="wardrobe 06">
+  <img src="Wardrobe06.webp" alt="Wardrobe06.webp">
+  <h3>
+    Wardrobe 06
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2006">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="wardrobe 07">
+  <img src="Wardrobe07.webp" alt="Wardrobe07.webp">
+  <h3>
+    Wardrobe 07
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2007">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="wardrobe 08">
+  <img src="Wardrobe08.webp" alt="Wardrobe08.webp">
+  <h3>
+    Wardrobe 08
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2008">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="wardrobe 09">
+  <img src="Wardrobe09.webp" alt="Wardrobe09.webp">
+  <h3>
+    Wardrobe 09
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2009">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="wardrobe 10">
+  <img src="Wardrobe10.webp" alt="Wardrobe10.webp">
+  <h3>
+    Wardrobe 10
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20wardrobe %2010">
+    Ask for details
+  </a>
+</div>
+    <!-- أضف باقي المنتجات بنفس الطريقة -->
+  </section>
+
+  <section id="readySets" class="tabContent">
+    <div class="sidebar">
+
+      <button data-room="room01" class="room">room01</button>
+      <button data-room="room02" class="room">room02</button>
+      <button data-room="room03" class="room">room03</button>
+      <button data-room="room04" class="room">room04</button>
+            <button data-room="room05" class="room">room05</button>
+            <button data-room="room06" class="room">room06</button>
+            <button data-room="room07" class="room">room07</button>
+            <button data-room="room08" class="room">room08</button>
+            <button data-room="room09" class="room">room09</button>
+            <button data-room="room10" class="room">room10</button>
+            <button data-room="room11" class="room">room11</button>
+            <button data-room="room12" class="room">room12</button>
+            <button data-room="room13" class="room">room13</button>
+            <button data-room="room14" class="room">room14</button>
+    </div>
+
+    <div class="content">
+      <img src="" id="mainImage" loading="lazy">
+      <div id="roomInfo">
+        <h2 id="roomTitle"></h2>
+        <p id="roomDescription"></p>
+        <a id="roomButton" target="_blank"></a>
+      </div>
+      <div class="parts" id="partsButtons"></div>
+    </div>
+  </section>
+
+  <script>
+    const singlePiecesBtn = document.getElementById("singlePiecesBtn");
+    const readySetsBtn = document.getElementById("readySetsBtn");
+
+    const singlePieces = document.getElementById("singlePieces");
+    const readySets = document.getElementById("readySets");
+
+    function showSection(section) {
+      singlePieces.style.display = "none";
+      readySets.style.display = "none";
+
+      if (section === "single") {
+        singlePieces.style.display = "flex";
+      } else if (section === "ready") {
+        readySets.style.display = "flex";
+        const firstRoom = document.querySelector(".sidebar .room.active") || document.querySelector(".sidebar .room");
+        if (firstRoom) firstRoom.click();
+      }
+    }
+
+    singlePiecesBtn.addEventListener("click", () => {
+      showSection("single");
+      singlePiecesBtn.classList.add("active");
+      readySetsBtn.classList.remove("active");
+    });
+
+    readySetsBtn.addEventListener("click", () => {
+      showSection("ready");
+      readySetsBtn.classList.add("active");
+      singlePiecesBtn.classList.remove("active");
+    });
+
+   /* const rooms = {
+      
+      room01: {
+        default: "Bedroom01part01.webp",
+        title: "Bedroom 01",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room01" },
+        parts: { "part1": "Bedroom01part01.webp", "part2": "Bedroom01part02.webp" }
+      },
+         room02: {
+        default: "Bedroom02part01.webp",
+        title: "Bedroom 02",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room02" },
+        parts: { "part1": "Bedroom02part01.webp", "part2": "Bedroom02part02.webp"
+       , "part3":"Bedroom02part03.webp" }
+      },
+            room03: {
+        default: "Bedroom03part01.webp",
+        title: "Bedroom 01",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room03" },
+        parts: { "part1": "Bedroom03part01.webp", "part2": "Bedroom03part02.webp" 
+      , 
+    }  },
+               room04: {
+        default: "Bedroom04part01.webp",
+        title: "Bedroom 04",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room04" },
+        parts: { "part1": "Bedroom04part01.webp", "part2": "Bedroom04part02.webp"
+       , "part3":"Bedroom04part03.webp" }
+      },
+
+room05: {
+        default: "Bedroom05part01.webp",
+        title: "Bedroom 05",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room05" },
+        parts: { "part1": "Bedroom05part01.webp", "part2": "Bedroom05part02.webp"
+       , "part3":"Bedroom05part03.webp" 
+      },
+    }
+room06: {
+        default: "Bedroom06part01.webp",
+        title: "Bedroom 06",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room06" },
+        parts: { "part1": "Bedroom06part01.webp", "part2": "Bedroom06part02.webp"
+       , "part3":"Bedroom06part03.webp" 
+      },
+    }
+room07: {
+        default: "Bedroom07part01.webp",
+        title: "Bedroom 07",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room07" },
+        parts: { "part1": "Bedroom07part01.webp", "part2": "Bedroom07part02.webp"
+        }, 
+      },
+    };*/
+    const rooms = {
+  room01: {
+    default: "Bedroom01part01.webp",
+    title: "Bedroom 01",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room01" },
+    parts: { "part1": "Bedroom01part01.webp", "part2": "Bedroom01part02.webp", 
+      "part3": "Bedroom02part02.webp", 
+    }
+  },
+  room02: {
+    default: "Bedroom02part01.webp",
+    title: "Bedroom 02",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room02" },
+    parts: { "part1": "Bedroom02part01.webp",
+    "part2":"Bedroom02part04.webp", "part3": "Bedroom02part03.webp" }
+  },
+  room03: {
+    default: "Bedroom03part01.webp",
+    title: "Bedroom 03",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room03" },
+    parts: { "part1": "Bedroom03part01.webp", "part2": "Bedroom03part02.webp", 
+       "part3": "Bedroom04part02.webp", 
+    }
+  },
+  room04: {
+    default: "Bedroom04part01.webp",
+    title: "Bedroom 04",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room04" },
+    parts: { "part1": "Bedroom04part01.webp", "part2": "Bedroom04part03.webp", 
+      "part3":"Bedroom04part04.webp ", 
+    }
+  },
+  room05: {
+    default: "Bedroom05part01.webp",
+    title: "Bedroom 05",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room05" },
+    parts: { "part1": "Bedroom05part01.webp", "part2": "Bedroom05part02.webp", "part3": "Bedroom05part03.webp" }
+  },
+  room06: {
+    default: "Bedroom06part01.webp",
+    title: "Bedroom 06",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room06" },
+    parts: { "part1": "Bedroom06part01.webp", "part2": "Bedroom06part02.webp", "part3": "Bedroom06part03.webp" }
+  },
+  room07: {
+    default: "Bedroom07part01.webp",
+    title: "Bedroom 07",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room07" },
+    parts: { "part1": "Bedroom07part01.webp", "part2": "Bedroom07part02.webp" }
+  }, 
+  room08: {
+    default: "Bedroom08part01.webp",
+    title: "Bedroom 08",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room08" },
+    parts: { "part1": "Bedroom08part01.webp", "part2": "Bedroom08part02.webp" }
+  }, 
+  room09: {
+    default: "Bedroom09part01.webp",
+    title: "Bedroom 09",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room09" },
+    parts: { "part1": "Bedroom09part01.webp", "part2": "Bedroom09part02.webp", 
+      "part3":"Bedroom09part03.webp"
+    }
+  }, 
+  room10: {
+    default: "Bedroom10part01.webp",
+    title: "Bedroom 10",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room10" },
+    parts: { "part1": "Bedroom08part10.webp", "part2": "Bedroom10part02.webp" }
+  }, 
+  room11: {
+    default: "Bedroom11part01.webp",
+    title: "Bedroom 11",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room11" },
+    parts: { "part1": "Bedroom11part01.webp", "part2": "Bedroom11part02.webp" }
+  }, 
+  room12: {
+    default: "Bedroom12part01.webp",
+    title: "Bedroom 12",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room12" },
+    parts: { "part1": "Bedroom12part01.webp", "part2": "Bedroom12part02.webp",  }
+  }, 
+  room13: {
+    default: "Bedroom13part01.webp",
+    title: "Bedroom 13",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room13" },
+    parts: { "part1": "Bedroom13part01.webp", "part2": "Bedroom13part02.webp", "part3":"Bedroom13part03.webp"}
+  }, 
+  room14: {
+    default: "Bedroom14part01.webp",
+    title: "Bedroom 14", 
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Bed%20room14" },
+    parts: { "part1": "Bedroom14part01.webp", "part2": "Bedroom14part02.webp",  "part3":"Bedroom14part03.webp" }
+  }, 
+};
+
+
+    const roomButtons = document.querySelectorAll(".room");
+    const mainImage = document.getElementById("mainImage");
+    const partsContainer = document.getElementById("partsButtons");
+    const roomTitle = document.getElementById("roomTitle");
+    const roomDescription = document.getElementById("roomDescription");
+    const roomButton = document.getElementById("roomButton");
+
+    roomButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        roomButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const roomKey = btn.getAttribute("data-room");
+        loadRoom(roomKey);
+      });
+    });
+
+    function loadRoom(roomKey) {
+      const room = rooms[roomKey];
+      if (!room) return;
+
+      mainImage.src = room.default;
+      roomTitle.textContent = room.title;
+      roomDescription.textContent = room.description || "";
+      if (room.button) {
+        roomButton.textContent = room.button.text;
+        roomButton.href = room.button.link;
+      } else {
+        roomButton.textContent = "";
+        roomButton.href = "#";
+      }
+
+      partsContainer.innerHTML = "";
+      for (let part in room.parts) {
+        const partBtn = document.createElement("button");
+        partBtn.textContent = part;
+        partBtn.addEventListener("click", () => mainImage.src = room.parts[part]);
+        partsContainer.appendChild(partBtn);
+      }
+    }
+
+    // --- Search bar ---
+    const searchBox = document.getElementById("searchbox");
+    searchBox.addEventListener("input", () => {
+      const query = searchBox.value.toLowerCase();
+      const products = document.querySelectorAll("#singlePieces .product");
+      products.forEach(product => {
+        const name = product.dataset.name.toLowerCase();
+        const title = product.querySelector("h3").textContent.toLowerCase();
+        product.style.display = (name.includes(query) || title.includes(query)) ? "block" : "none";
+      });
+    });
+
+    // --- Show default section ---
+    showSection("single");
+  </script>
+</body>
+</html>
