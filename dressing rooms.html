@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dressing rooms</title>
+  <style>
+    /* --- Navbar --- */
+    nav {
+      background: #703800;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 1000;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 3rem;
+      position: fixed;
+      top: 0;
+      left: 0.5rem;
+    }
+
+    h1 {
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    /* --- Search input --- */
+    input {
+      text-align: center;
+      margin-left: 35%;
+      margin-top: 1rem;
+      width: 13rem;
+      height: 2rem;
+    }
+
+    input:hover {
+      width: 15rem;
+      height: 3rem;
+      margin-left: 20%;
+    }
+
+    /* --- Products --- */
+    .product {
+      text-align: center;
+    }
+
+    .product img {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 2rem;
+    }
+
+    .product a {
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 1rem;
+      background: #ECE0D5;
+      color: #703800;
+      font-weight: 1000;
+      padding: 0.5rem;
+    }
+
+    /* --- Tabs --- */
+    #mainTabs {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    #mainTabs button {
+      border: none;
+      font-size: 1rem;
+      border-radius: 1rem;
+      background: #ECE0D5;
+      color: #703800;
+      font-weight: 1000;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    #mainTabs .active {
+      background: #703800;
+      color: #ECE0D5;
+      box-shadow: 0 0 1rem #703800;
+    }
+
+    #singlePieces {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    #readySets {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    /* --- Sidebar rooms --- */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1rem;
+      width: 20%;
+    }
+
+    .sidebar .room {
+      border: none;
+      font-size: 0.8rem;
+      border-radius: 1rem;
+      background: #ECE0D5;
+      color: #703800;
+      font-weight: 1000;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .sidebar .room.active {
+      background: #703800;
+      color: #ECE0D5;
+      box-shadow: 0 0 1rem #703800;
+    }
+
+    .sidebar .room:hover {
+      background: #9D4F00;
+      color: #fff;
+    }
+
+    .content {
+      width: 75%;
+    }
+
+    .tabContent {
+      display: none;
+      margin: 2rem 0;
+    }
+
+    /* --- Main image --- */
+    #mainImage {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #partsButtons button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      background: #ECE0D5;
+      color: #703800;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    #partsButtons button:hover {
+      background: #703800;
+      color: #fff;
+    }
+
+    /* --- Room info --- */
+    #roomInfo {
+      text-align: center;
+      margin: 1rem;
+    }
+
+    #roomInfo h2 {
+      color: #703800;
+      margin-bottom: 0.5rem;
+    }
+
+    #roomInfo p {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    #roomButton {
+      text-decoration: none;
+      padding: 0.5rem 0.5rem;
+      background: #9D4F00;
+      color: #fff;
+      border-radius: 0.5rem;
+      font-weight: bold;
+    }
+
+    #roomButton:hover {
+      background: #703800;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="Logo.webp" class="logo" alt="Logo">
+    <h1>Dressing room</h1>
+  </nav>
+
+  <input type="text" id="searchbox" placeholder="search with number or name">
+
+  <div id="mainTabs">
+    <button class="active" id="singlePiecesBtn">Single pieces</button>
+    <button id="readySetsBtn">Ready sets</button>
+  </div>
+
+  <section id="singlePieces" class="tabContent">
+    <!-- منتجات فردية -->
+    <div class="product" data-name="dressing room 01">
+      <img src="dressingroom01.webp" alt="dressingroom01" loading="lazy">
+      <h3>dressing room01</h3>
+      <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room01">Ask for details</a>
+    </div>
+    <div class="product" data-name="dressing room 02">
+      <img src="dressingroom02.webp" alt="dressingroom02" loading="lazy">
+      <h3>dressing room02</h3>
+      <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room02">Ask for details</a>
+    </div>
+    <div class="product" data-name="dressing room 03">
+  <img src="dressingroom03.webp" alt="dressingroom03.webp" loading="lazy">
+  <h3>
+    dressing room03
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room03">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="dressing room 04">
+  <img src="dressingroom04.webp" loading="lazy">
+  <h3>
+    dressing room04
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room04">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="dressing room 05">
+  <img src="dressingroom05.webp" alt="dressingroom05.webp" loading="lazy">
+  <h3>
+    dressing room05
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room05">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="dressing room 06">
+  <img src="dressingroom06.webp" alt="" loading="lazy">
+  <h3>
+   dressing room06
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room06">
+Ask for details 
+  </a>
+</div>
+<div class="product" data-name="dressing room 08">
+  <img src="dressingroom08.webp" alt="dressingroom08.webp" loading="lazy">
+  <h3>
+    dressing room08
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room08">
+    Ask for details
+  </a>
+</div>
+<div class="product" data-name="dressing room 10">
+  <img src="dressingroom10.webp" alt="dressingroom10.webp" loading="lazy">
+  <h3>
+   dressing room10
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room10">
+Ask for details 
+  </a>
+</div>
+<div class="product" data-name="dressing room 13">
+  <img src="dressingroom13.webp" alt="dressingroom13.webp" loading="lazy">
+  <h3>
+   dressing room13
+  </h3>
+  <a href="https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room13">
+Ask for details 
+  </a>
+</div>
+
+  </section>
+
+  <section id="readySets" class="tabContent">
+    <div class="sidebar">
+      <button data-room="recommends" class="room active">recommends</button>
+      <button data-room="room1" class="room">room1</button>
+      <button data-room="room2" class="room">room2</button>
+      <button data-room="room3" class="room">room3</button>
+      <button data-room="room4" class="room">room4</button>
+    </div>
+
+    <div class="content">
+      <img src="" id="mainImage" loading="lazy">
+      <div id="roomInfo">
+        <h2 id="roomTitle"></h2>
+        <p id="roomDescription"></p>
+        <a id="roomButton" target="_blank"></a>
+      </div>
+      <div class="parts" id="partsButtons"></div>
+    </div>
+  </section>
+
+  <script>
+    const singlePiecesBtn = document.getElementById("singlePiecesBtn");
+    const readySetsBtn = document.getElementById("readySetsBtn");
+
+    const singlePieces = document.getElementById("singlePieces");
+    const readySets = document.getElementById("readySets");
+
+    function showSection(section) {
+      singlePieces.style.display = "none";
+      readySets.style.display = "none";
+
+      if (section === "single") {
+        singlePieces.style.display = "flex";
+      } else if (section === "ready") {
+        readySets.style.display = "flex";
+        const firstRoom = document.querySelector(".sidebar .room.active") || document.querySelector(".sidebar .room");
+        if (firstRoom) firstRoom.click();
+      }
+    }
+
+    singlePiecesBtn.addEventListener("click", () => {
+      showSection("single");
+      singlePiecesBtn.classList.add("active");
+      readySetsBtn.classList.remove("active");
+    });
+
+    readySetsBtn.addEventListener("click", () => {
+      showSection("ready");
+      readySetsBtn.classList.add("active");
+      singlePiecesBtn.classList.remove("active");
+    });
+
+    const rooms = {
+      recommends: {
+        default: "Recommenddressingroom01.webp",
+        title: "Recommends in design",
+        
+        parts: {
+          "Design1": "Recommenddressingroom01.webp",
+          "Design2": "Recommenddressingroom02.webp",
+          "Design3": "Recommenddressingroom03.webp",
+          "Design4": "Recommenddressingroom04.webp",
+          "Design5": "Recommenddressingroom05.webp",
+          "Design6": "Recommenddressingroom06.webp",
+          "Design7": "Recommenddressingroom07.webp",
+          "Design8": "Recommenddressingroom08.webp",
+          "Design9": "Recommenddressingroom09.webp",
+        }
+      },
+      room1: {
+        default: "dressingroom07part1.webp",
+        title: "dressing room07",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room07" },
+        parts: { "part1": "dressingroom07part1.webp", "part2": "dressingroom07part2.webp" }
+      },
+      room2: {
+        default: "dressingroom09part1.webp",
+        title: "room09",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room09" },
+        parts: { "part1": "dressingroom09part1.webp", "part2": "dressingroom09part2.webp" }
+      },
+      room3: {
+        default: "dressingroom11part1.webp",
+        title: "room11",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room11" },
+        parts: { "part1": "dressingroom11part1.webp", "part2": "dressingroom11part2.webp" }
+      },
+      room4: {
+        default: "dressingroom12part1.webp",
+        title: "room12",
+        button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20dressing%20room12" },
+        parts: { "part1": "dressingroom12part1.webp", "part2": "dressingroom12part2.webp" }
+      }
+    };
+
+    const roomButtons = document.querySelectorAll(".room");
+    const mainImage = document.getElementById("mainImage");
+    const partsContainer = document.getElementById("partsButtons");
+    const roomTitle = document.getElementById("roomTitle");
+    const roomDescription = document.getElementById("roomDescription");
+    const roomButton = document.getElementById("roomButton");
+
+    roomButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        roomButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const roomKey = btn.getAttribute("data-room");
+        loadRoom(roomKey);
+      });
+    });
+
+    function loadRoom(roomKey) {
+      const room = rooms[roomKey];
+      if (!room) return;
+
+      mainImage.src = room.default;
+      roomTitle.textContent = room.title;
+      roomDescription.textContent = room.description || "";
+      if (room.button) {
+        roomButton.textContent = room.button.text;
+        roomButton.href = room.button.link;
+      } else {
+        roomButton.textContent = "";
+        roomButton.href = "#";
+      }
+
+      partsContainer.innerHTML = "";
+      for (let part in room.parts) {
+        const partBtn = document.createElement("button");
+        partBtn.textContent = part;
+        partBtn.addEventListener("click", () => mainImage.src = room.parts[part]);
+        partsContainer.appendChild(partBtn);
+      }
+    }
+
+    // --- Search bar ---
+    const searchBox = document.getElementById("searchbox");
+    searchBox.addEventListener("input", () => {
+      const query = searchBox.value.toLowerCase();
+      const products = document.querySelectorAll("#singlePieces .product");
+      products.forEach(product => {
+        const name = product.dataset.name.toLowerCase();
+        const title = product.querySelector("h3").textContent.toLowerCase();
+        product.style.display = (name.includes(query) || title.includes(query)) ? "block" : "none";
+      });
+    });
+
+    // --- Show default section ---
+    showSection("single");
+  </script>
+</body>
+</html>
