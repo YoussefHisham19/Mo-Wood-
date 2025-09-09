@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dressing rooms</title>
+<style>
+  nav {
+    background: #703800;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 1000;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .logo {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0.5rem;
+  }
+  h1 { color: #fff; text-align: center; }
+
+  #readySets {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-top: 5rem;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 25%;
+  }
+  .sidebar .room {
+    border: none;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    background: #ECE0D5;
+    color: #703800;
+    font-weight: 1000;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .sidebar .room.active { background: #703800; color: #ECE0D5; box-shadow: 0 0 1rem #703800; }
+  .sidebar .room:hover { background: #9D4F00; color: #fff; }
+
+  .content { width: 70%; }
+  #mainImage {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  #partsButtons button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #ECE0D5;
+    color: #703800;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  #partsButtons button:hover { background: #703800; color: #fff; }
+
+  #roomInfo { text-align: center; margin: 1rem; }
+  #roomInfo h2 { color: #703800; margin-bottom: 0.5rem; }
+  #roomInfo p { color: #333; margin-bottom: 1rem; }
+  #roomButton {
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    background: #9D4F00;
+    color: #fff;
+    border-radius: 0.5rem;
+    font-weight: bold;
+  }
+  #roomButton:hover { background: #703800; }
+</style>
+</head>
+<body>
+<nav>
+  <img src="Logo.webp" class="logo" alt="Logo">
+  <h1>Dressing room</h1>
+</nav>
+
+<section id="readySets">
+  <div class="sidebar">
+    <button data-room="room1" class="room active">room1</button>
+    <button data-room="room2" class="room">room2</button>
+    <button data-room="room3" class="room">room3</button>
+    <button data-room="room4" class="room">room4</button>
+    <button data-room="room5" class="room">room5</button>
+     <button data-room="room6" class="room">room6</button>
+     <button data-room="room7" class="room">room7</button>
+ <button data-room="room8" class="room">room8</button>
+ <button data-room="room9" class="room">room9</button>
+ <button data-room="room10" class="room">room10</button>
+ <button data-room="room11" class="room">room11</button>
+ <button data-room="room12" class="room">room12</button>
+ <button data-room="room13" class="room">room13</button>
+  </div>
+
+  <div class="content">
+    <img src="" id="mainImage" loading="lazy">
+    <div id="roomInfo">
+      <h2 id="roomTitle"></h2>
+      <p id="roomDescription"></p>
+      <a id="roomButton" target="_blank"></a>
+    </div>
+    <div class="parts" id="partsButtons"></div>
+  </div>
+</section>
+
+<script>
+const rooms = {
+  room1: {
+    default: "Childrenbedroom01part01.webp",
+    title: "Children Bedroom 01",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom01" },
+    parts: { "part1":"Childrenbedroom01part01.webp", 
+    "part2":"Childrenbedroom01part02.webp", 
+    "part3":"Childrenbedroom01part03.webp"}, 
+  },
+  room2: {
+    default: "Childrenbedroom02part01.webp",
+    title: "Children room02",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom02" },
+    parts: { "part1":"Childrenbedroom02part01.webp", 
+    "part2":"Childrenbedroom02part02.webp",
+     "part3":"Childrenbedroom02part03.webp",}
+  },
+  room3: {
+    default: "Childrenbedroom03part01.webp",
+    title: "Children room03",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom03" },
+    parts: { "part1":"Childrenbedroom03part01.webp", 
+    "part2":"Childrenbedroom03part02.webp",
+     "part3":"Childrenbedroom03part03.webp",}
+  },
+  room4: {
+    default: "Childrenbedroom04part01.webp",
+    title: "Children room04",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom04" },
+    parts: { "part1":"Childrenbedroom04part01.webp", 
+    "part2":"Childrenbedroom04part02.webp",
+     "part3":"Childrenbedroom04part03.webp",}
+  },
+  room5: {
+    default: "Childrenbedroom05part01.webp",
+    title: "Children room05",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom05" },
+    parts: { "part1":"Childrenbedroom05part01.webp", 
+    "part2":"Childrenbedroom05part02.webp",
+     "part3":"Childrenbedroom05part03.webp",}
+  },
+  room6: {
+    default: "Childrenbedroom06part01.webp",
+    title: "Children room06",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom06" },
+    parts: { "part1":"Childrenbedroom06part01.webp", 
+    "part2":"Childrenbedroom06part02.webp",
+     "part3":"Childrenbedroom06part03.webp",}
+  },
+  room7: {
+    default: "Childrenbedroom07part01.webp",
+    title: "Children room07",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom07" },
+    parts: { "part1":"Childrenbedroom07part01.webp", 
+    "part2":"Childrenbedroom07part02.webp",
+     "part3":"Childrenbedroom07part03.webp",}
+  },
+  room8: {
+    default: "Childrenbedroom08part01.webp",
+    title: "Children room08",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom08" },
+    parts: { "part1":"Childrenbedroom08part01.webp", 
+    "part2":"Childrenbedroom08part02.webp",
+     "part3":"Childrenbedroom08part03.webp",}
+  },
+  room9: {
+    default: "Childrenbedroom09part01.webp",
+    title: "Children room09",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom09" },
+    parts: { "part1":"Childrenbedroom09part01.webp", 
+    "part2":"Childrenbedroom09part02.webp",
+     "part3":"Childrenbedroom09part03.webp",}
+  },
+  room10: {
+    default: "Childrenbedroom10part01.webp",
+    title: "Children room10",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom10" },
+    parts: { "part1":"Childrenbedroom10part01.webp", 
+    "part2":"Childrenbedroom10part02.webp",
+     "part3":"Childrenbedroom10part03.webp",}
+  },
+  room11: {
+    default: "Childrenbedroom11part01.webp",
+    title: "Children room11",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom11" },
+    parts: { "part1":"Childrenbedroom11part01.webp", 
+    "part2":"Childrenbedroom11part02.webp",
+     "part3":"Childrenbedroom11part03.webp",}
+  },
+  room12: {
+    default: "Childrenbedroom12part01.webp",
+    title: "Children room12",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom12" },
+    parts: { "part1":"Childrenbedroom12part01.webp", 
+    "part2":"Childrenbedroom12part02.webp",
+     "part3":"Childrenbedroom12part03.webp",}
+  },
+  room13: {
+    default: "Childrenbedroom13part01.webp",
+    title: "Children room13",
+    button: { text: "Ask for details", link: "https://wa.me/201120004447?text=انا%20مهتم%20ب%20Children%20bedroom13" },
+    parts: { "part1":"Childrenbedroom13part01.webp", 
+    "part2":"Childrenbedroom13part02.webp",
+     "part3":"Childrenbedroom13part03.webp",}
+  },
+}
+const roomButtons = document.querySelectorAll(".room");
+const mainImage = document.getElementById("mainImage");
+const partsContainer = document.getElementById("partsButtons");
+const roomTitle = document.getElementById("roomTitle");
+const roomDescription = document.getElementById("roomDescription");
+const roomButton = document.getElementById("roomButton");
+
+roomButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    roomButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const roomKey = btn.getAttribute("data-room");
+    loadRoom(roomKey);
+  });
+});
+
+function loadRoom(roomKey) {
+  const room = rooms[roomKey];
+  if (!room) return;
+  mainImage.src = room.default;
+  roomTitle.textContent = room.title;
+  roomDescription.textContent = room.description || "";
+  if (room.button) {
+    roomButton.textContent = room.button.text;
+    roomButton.href = room.button.link;
+  } else {
+    roomButton.textContent = "";
+    roomButton.href = "#";
+  }
+  partsContainer.innerHTML = "";
+  for (let part in room.parts) {
+    const partBtn = document.createElement("button");
+    partBtn.textContent = part;
+    partBtn.addEventListener("click", () => mainImage.src = room.parts[part]);
+    partsContainer.appendChild(partBtn);
+  }
+}
+
+// تشغيل الغرفة الافتراضية عند تحميل الصفحة
+document.addEventListener("DOMContentLoaded", () => {
+  const firstRoom = document.querySelector(".sidebar .room.active") || document.querySelector(".sidebar .room");
+  if (firstRoom) firstRoom.click();
+});
+</script>
+</body>
+</html>
