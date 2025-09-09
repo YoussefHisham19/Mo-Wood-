@@ -1,0 +1,362 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kitchen</title>
+  <style>
+    nav {
+      background: #703800;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 1000;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+        .logo {
+      height: 5rem; width: 5rem; border-radius: 3rem;
+      position: absolute; top: 0; left: 0;
+    }
+    h1 { color: #FFFFFF; text-align: center; }
+    input{
+      text-align: center ;
+      margin-left: 35% ;
+      margin-top: 1rem ;
+      width: 13rem ;
+      height:2rem ;
+    }
+     input:hover{
+       width:15rem;
+       height:3rem ;
+       margin-left:20%;
+     }
+   .main-view img{
+     width:10rem ;
+     height:10rem ;
+   }
+  .product-info {
+    text-align:center ;
+  }
+   #mainImage{
+     width:20rem ;
+     height:20rem;
+     object-fit:contain ; 
+     margin:2rem 4%;
+   }
+  .thumbnails img{
+    width:8rem ;
+    height:8rem ;
+  }
+ .thumbnails{
+   display:flex ;
+   flex-wrap:wrap ;
+   justify-content:center;
+   gap:0.5rem ; 
+ }
+ .gallery{
+   display:flex ;
+   justify-content:center ;
+   margin-top:5rem ;
+ }
+.gallery img:hover {
+  height:12rem ;
+  width:12rem;
+  position:absolute ;
+  z-index:1000 ;
+}
+#detailsBtn{
+  text-decoration:none ;
+  color:#703800;
+  background:#B9783E ;
+  padding:0.5rem ;
+  border-radius:3rem ;
+  
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="Logo.webp" class="logo" alt="Logo">
+    <h1>Kitchen</h1>
+  </nav>
+  <input type="text" id="searchbox"  placeholder="search">
+  <div class="main-view">
+    <img id="mainImage" src="Kitchen01.webp" alt="main product">
+  </div>
+  <div class="product-info">
+    <h2 id="productTitle">
+Kitchen 01
+    </h2>
+    <a id="detailsBtn" href="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2001" target="_blank"
+class="btn"> Ask for details 
+    </a>
+  </div>
+  <article class="gallery">
+<div class="thumbnails">
+<img src="Kitchen01.webp" data-full="Kitchen01.webp"
+data-title="kitchen01" data-name="kitchen 01.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2001">
+<img src="Kitchen02.webp" data-full="Kitchen02.webp"
+data-title="kitchen02" data-name="kitchen 02.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2002">
+
+<img src="Kitchen03.webp" data-full="Kitchen03.webp"
+data-title="kitchen03" data-name="kitchen 03.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2003">
+
+<img src="Kitchen04.webp" data-full="Kitchen04.webp"
+data-title="kitchen04" data-name="kitchen 04.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2004">
+
+<img src="Kitchen05.webp" data-full="Kitchen05.webp"
+data-title="kitchen05" data-name="kitchen 05.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2005">
+
+<img src="Kitchen06.webp" data-full="Kitchen06.webp"
+data-title="kitchen06" data-name="kitchen 06.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2006">
+
+<img src="Kitchen07.webp" data-full="Kitchen07.webp"
+data-title="kitchen07" data-name="kitchen 07.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2007">
+
+<img src="Kitchen08.webp" data-full="Kitchen08.webp"
+data-title="kitchen08" data-name="kitchen 08.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2008">
+
+<img src="Kitchen09.webp" data-full="Kitchen09.webp"
+data-title="kitchen09" data-name="kitchen 09.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2009">
+
+<img src="Kitchen10.webp" data-full="Kitchen10.webp"
+data-title="kitchen10" data-name="kitchen 10.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2010">
+
+<img src="Kitchen11.webp" data-full="Kitchen11.webp"
+data-title="kitchen11" data-name="kitchen 11.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2011">
+<img src="Kitchen12.webp" data-full="Kitchen12.webp"
+data-title="kitchen12" data-name="kitchen 12.webp"
+data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2012">
+</div>
+  </article>
+  <script>
+const thumbs = document.querySelectorAll(".thumbnails img");
+    const mainImg = document.getElementById("mainImage");
+    const title = document.getElementById("productTitle");
+    const detailsBtn = document.getElementById("detailsBtn");
+    const searchbox = document.getElementById("searchbox");
+
+    // لما اضغط على صورة مصغرة
+    thumbs.forEach(img => {
+      img.addEventListener('click', () => {
+        updateMain(img);
+      });
+    });
+
+    // دالة تحديث الصورة الرئيسية + النصوص
+    function updateMain(img) {
+      thumbs.forEach(t => t.classList.remove("active"));
+      img.classList.add("active");
+
+      mainImg.src = img.dataset.full;
+      title.textContent = img.dataset.title;
+      detailsBtn.href = img.dataset.link;
+    }
+
+    // البحث
+    searchbox.addEventListener("input", () => {
+      const value = searchbox.value.toLowerCase();
+      let found = false;
+
+      thumbs.forEach(product => {
+        const text = product.dataset.name.toLowerCase();
+        if (text.includes(value)) {
+          product.style.display = "block";
+          if (!found) { // أول نتيجة فقط
+            updateMain(product);
+            found = true;
+          }
+        } else {
+          product.style.display = "none";
+        }
+      });
+
+      if (!found && value !== "") {
+        // لو مفيش نتيجة
+        mainImg.src = "";
+        title.textContent = "No product found";
+        detailsBtn.removeAttribute("href");
+      }
+    });
+  </script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kitchen</title>
+  <style>
+    nav {
+      background: #703800;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 1000;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .logo {
+      height: 5rem; width: 5rem; border-radius: 3rem;
+      position: absolute; top: 0; left: 0;
+    }
+    h1 { color: #FFFFFF; text-align: center; }
+    input {
+      text-align: center;
+      margin-left: 35%;
+      margin-top: 1rem;
+      width: 13rem;
+      height: 2rem;
+    }
+    input:hover {
+      width: 15rem;
+      height: 3rem;
+      margin-left: 20%;
+    }
+    .main-view img {
+      width: 20rem;
+      height: 20rem;
+      object-fit: contain;
+      margin: 2rem auto;
+      display: block;
+    }
+    .product-info {
+      text-align: center;
+    }
+    #detailsBtn {
+      text-decoration: none;
+      color: #703800;
+      background: #FFCA9B;
+      padding: 0.5rem;
+      border-radius: 3rem;
+      font-size:1rem ;
+      font-weight:bold ;
+      
+    }
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .carousel-controls button {
+      background: #703800;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .carousel-controls button:hover {
+      background: #B9783E;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="Logo.webp" class="logo" alt="Logo">
+    <h1>Kitchen</h1>
+  </nav>
+
+  <input type="text" id="searchbox" placeholder="search with number or name">
+
+  <div class="main-view">
+    <img id="mainImage" src="Kitchen01.webp" alt="main product">
+  </div>
+
+  <div class="product-info">
+    <h2 id="productTitle">Kitchen 01</h2>
+    <a id="detailsBtn" href="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2001" target="_blank" class="btn">Ask for details</a>
+  </div>
+
+  <!-- أزرار التحكم -->
+  <div class="carousel-controls">
+    <button id="prevBtn">⟨ Prev</button>
+    <button id="nextBtn">Next ⟩</button>
+  </div>
+
+  <div class="thumbnails" style="display:none;">
+    <img src="Kitchen01.webp" data-full="Kitchen01.webp" data-title="Kitchen 01" data-name="kitchen 01" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2001" loading="lazy">
+    <img src="Kitchen02.webp" data-full="Kitchen02.webp" data-title="Kitchen 02" data-name="kitchen 02" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2002" loading="lazy">
+    <img src="Kitchen03.webp" data-full="Kitchen03.webp" data-title="Kitchen 03" data-name="kitchen 03" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2003" loading="lazy">
+    <img src="Kitchen04.webp" data-full="Kitchen04.webp" data-title="Kitchen 04" data-name="kitchen 04" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2004" loading="lazy">
+    <img src="Kitchen05.webp" data-full="Kitchen05.webp" data-title="Kitchen 05" data-name="kitchen 05" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2005" loading="lazy">
+    <img src="Kitchen06.webp" data-full="Kitchen06.webp" data-title="Kitchen 06" data-name="kitchen 06" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2006" loading="lazy">
+    <img src="Kitchen07.webp" data-full="Kitchen07.webp" data-title="Kitchen 07" data-name="kitchen 07" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2007" loading="lazy">
+    <img src="Kitchen08.webp" data-full="Kitchen08.webp" data-title="Kitchen 08" data-name="kitchen 08" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2008" loading="lazy">
+    <img src="Kitchen09.webp" data-full="Kitchen09.webp" data-title="Kitchen 09" data-name="kitchen 09" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2009" loading="lazy">
+    <img src="Kitchen10.webp" data-full="Kitchen10.webp" data-title="Kitchen 10" data-name="kitchen 10" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2010 loading="lazy"">
+    <img src="Kitchen11.webp" data-full="Kitchen11.webp" data-title="Kitchen 11" data-name="kitchen 11" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2011" loading="lazy">
+    <img src="Kitchen12.webp" data-full="Kitchen12.webp" data-title="Kitchen 12" data-name="kitchen 12" data-link="https://wa.me/201120004447?text=أنا%20مهتم%20بـ%20Kitchen%2012" loading="lazy">
+  </div>
+
+  <script>
+    const thumbs = document.querySelectorAll(".thumbnails img");
+    const mainImg = document.getElementById("mainImage");
+    const title = document.getElementById("productTitle");
+    const detailsBtn = document.getElementById("detailsBtn");
+    const searchbox = document.getElementById("searchbox");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let currentIndex = 0;
+
+    function updateMainByIndex(index) {
+      const img = thumbs[index];
+      if (!img) return;
+      mainImg.src = img.dataset.full;
+      title.textContent = img.dataset.title;
+      detailsBtn.href = img.dataset.link;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+      updateMainByIndex(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % thumbs.length;
+      updateMainByIndex(currentIndex);
+    });
+
+    // البحث
+    searchbox.addEventListener("input", () => {
+      const value = searchbox.value.toLowerCase();
+      let foundIndex = -1;
+      thumbs.forEach((product, index) => {
+        const text = product.dataset.name.toLowerCase();
+        if (text.includes(value) && foundIndex === -1) {
+          foundIndex = index;
+        }
+      });
+      if (foundIndex !== -1) {
+        currentIndex = foundIndex;
+        updateMainByIndex(currentIndex);
+      } else if (value !== "") {
+        mainImg.src = "";
+        title.textContent = "No product found";
+        detailsBtn.removeAttribute("href");
+      }
+    });
+
+    // البداية
+    updateMainByIndex(currentIndex);
+  </script>
+</body>
+</html>
